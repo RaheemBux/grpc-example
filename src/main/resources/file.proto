@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.test.grpcexample.protoimpl";
+option java_outer_classname = "File";
+
+service file {
+    rpc upload(UploadRequest) returns (UploadResponse);
+    rpc download(DownloadRequest) returns (DownloadResponse);
+}
+
+message UploadRequest {
+    bytes file = 1;
+}
+
+message UploadResponse {
+    string message = 1;
+}
+
+message DownloadRequest {
+    string filename = 1;
+}
+
+message DownloadResponse {
+    bytes file = 1;
+}
+
