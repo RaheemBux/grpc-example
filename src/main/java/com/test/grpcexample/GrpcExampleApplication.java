@@ -2,7 +2,6 @@ package com.test.grpcexample;
 
 
 import com.test.grpcexample.service.FileService;
-import com.test.grpcexample.service.UserService;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 
